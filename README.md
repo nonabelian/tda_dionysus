@@ -1,19 +1,26 @@
 # Topology and Data Analysis with Dionysus
 
 This repository contains a demonstration of Topological Data Analysis (TDA),
-interfacing with Dionysus
+interfacing with [Dionysus](http://www.mrzv.org/software/dionysus/).
 
 ## Introduction
 
-Topology main points, extremely informally:
+**Topology** main points, extremely informally:
 * Topology is about classes of surfaces continuously deformable into each other.
 * Surface is infinitely stretchy and compressible, but no ripping of the surface allowed.
 
-Topological Data Analysis main points, also extremely informally:
+**Topological** Data Analysis main points, also extremely informally:
 * Topological data is a discretization of ideas from topology.
 * TDA provides access to invariants (and more) under deformation.
 * "Data has shape, and shape has meaning."
 * TDA provides some understanding of high-dimensional (>3) space.
+
+**Dionysus** main points:
+* Calculate topological features from data.
+* Package written in C++ with Python bindings.
+* Can access many functions and attributes.
+* Freely available, open sourced.
+* Used in [R TDA](https://cran.r-project.org/web/packages/TDA/index.html).
 
 For continuous space, famously, "the coffee cup is topologically equivalent to
 a donut", which can be viewed
