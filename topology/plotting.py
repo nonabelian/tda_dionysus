@@ -7,7 +7,7 @@
     is a matplotlib version of function in Dionysus
 
 '''
-
+from collections import defaultdict
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -155,6 +155,45 @@ def draw_complex(X, simplicial_complex, ax=None):
     ax.set_ylim(ymin, ymax)
 
     return ax
+
+
+def draw_barcode(dynamic_persistence, smap, evaluator):
+    bcode_data = defaultdict(list)
+    for sigma in dynamic_persistence:
+        if not sigma.sign():
+            death = evaluator(smap[sigma])
+            birth = evaluator(smap[sigma.pair()])
+
+            if (death - birth) < 0.001:
+                continue
+
+            cycle = [smap[ii] for ii in sigma.cycle]
+            chain = [smap[ii] for ii in sigma.chain]
+
+            if not chain or not cycle:
+                continue
+
+            dim = chain[0].dimension()
+
+            bcode_data[dim].append([birth, death])
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+
+    ccolor = {1: 'b', 2: 'r', 3: 'g'}
+
+    for dim, bds in bcode_data.iteritems():
+        yoffset = dim
+        for i, (b, d) in enumerate(bds):
+            y = yoffset + i/float(len(bds))
+            ax.plot([b, d], [y, y], c=ccolor[dim])
+
+    ax.set_xlabel('Distance Scale')
+    ax.set_ylabel('Homology Dimension')
+    ax.set_title('Barcode')
+
+    return ax
+
 
 def _get_padded_box(X, padding=0.1):
 
