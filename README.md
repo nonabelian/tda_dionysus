@@ -17,7 +17,7 @@ Famously, "the coffee cup is topologically equivalent to a donut".
 
 **Think of rescaling features as a deformation**
 
-[!Coffee Mug]("images/Mug_and_Torus_morph.gif")
+![Coffee Mug]("images/Mug_and_Torus_morph.gif")
 
 ## Installation
 
