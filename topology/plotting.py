@@ -183,13 +183,20 @@ def draw_barcode(dynamic_persistence, smap, evaluator):
     ccolor = {1: 'b', 2: 'r', 3: 'g'}
 
     for dim, bds in bcode_data.iteritems():
-        yoffset = dim
+        yoffset = dim-1
         for i, (b, d) in enumerate(bds):
             y = yoffset + i/float(len(bds))
             ax.plot([b, d], [y, y], c=ccolor[dim])
 
+    y_major_ticks = np.arange(0, 3)
+    y_minor_ticks = np.arange(0.5, 2.5, 1)
+    y_labels = ['$H_{}$'.format(i) for i in range(0,3)]
+
     ax.set_xlabel('Distance Scale')
     ax.set_ylabel('Homology Dimension')
+    ax.set_yticklabels('')
+    ax.set_yticks(y_minor_ticks, minor=True)
+    ax.set_yticklabels(y_labels, minor=True)
     ax.set_title('Barcode')
 
     return ax
