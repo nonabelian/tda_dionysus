@@ -30,12 +30,12 @@ a model.  Topological invariants are
 insensitive to such transformations.  **Think of rescaling features as a
 deformation**.
 
-The way to capture the concepts of topology for discrete sets of data is
-accomplished through something called persistent homology.  Essentially it
-means that when we only connect points a certain distance (scale) apart.  As we
+Capturing the concepts of topology for discrete sets of data is
+accomplished through something called *persistent homology*.  Essentially it
+means that we only connect points a certain distance (scale) apart.  As we
 change the scale, for each scale we check to see which features are there.  So
 for example, at some large enough scale, we will connect points across a hole
-and the hole will disappear. Features that stick around*persist*. This is best
+and the hole will disappear. Features that stick around *persist*. This is best
 demonstrated through an example.  Consider noisy data in the shape of a circle:
 
 ![cycle persistence](images/animated_persistence.gif)
