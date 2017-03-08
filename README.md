@@ -48,7 +48,9 @@ demonstrated through an example.  Consider noisy data in the shape of a circle:
 As we change the length scale, we can see holes being 'born' and eventually
 'dying'.  This results in a *birth-death* diagram, or equivalently, a
 *barcode*.  Barcodes can be thought of as a fingerprint for the shape of the
-data.
+data.  For example,
+
+![barcode](images/barcode.png)
 
 ## Installation
 
