@@ -1,7 +1,12 @@
 # Topology and Data Analysis with Dionysus
 
-This repository contains a demonstration of Topological Data Analysis (TDA),
+This repository contains applications of Topological Data Analysis (TDA),
 interfacing with [Dionysus](http://www.mrzv.org/software/dionysus/).
+You are encouraged to read the detailed and more technical account of
+[TDA on Wikipedia](https://en.wikipedia.org/wiki/Topological_data_analysis).
+
+The goal is to eventually create networks of data topology for a few realistic
+datasets.
 
 ## Introduction
 
@@ -9,13 +14,13 @@ interfacing with [Dionysus](http://www.mrzv.org/software/dionysus/).
 * Topology is about classes of surfaces continuously deformable into each other.
 * Surface is infinitely stretchy and compressible, but no ripping of the surface allowed.
 
-**Topological** Data Analysis main points, also extremely informally:
+**Topological Data Analysis** main points, also extremely informally:
 * Topological data is a discretization of ideas from topology.
 * TDA provides access to invariants (and more) under deformation.
 * "Data has shape, and shape has meaning."
 * TDA provides some understanding of high-dimensional (>3) space.
 
-**Dionysus** main points:
+**Dionysus**:
 * Calculate topological features from data.
 * Package written in C++ with Python bindings.
 * Can access many functions and attributes.
