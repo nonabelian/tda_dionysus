@@ -13,13 +13,17 @@ Topological Data Analysis main points, extremely informally:
 * Data has shape, and shape has meaning.
 * Difficult to understand high-dimensional (>3) space.
 
-Famously, "the coffee cup is topologically equivalent to a donut".
+Famously, "the coffee cup is topologically equivalent to a donut", which
+can be viewed
+[on Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif).
 
 **Think of rescaling features as a deformation**
 
-![Coffee Mug](images/Mug_and_Torus_morph.gif)
+![cycle persistence](images/animated_persistence.gif)
 
 ## Installation
+
+Please see the [installation doc](docs/Installation.md).
 
 ## Requirements
 

@@ -95,10 +95,12 @@ def animate_persistence(X, pcycle):
         INPUT: Nx2 numpy array(dataset), list (from 'persistent_cycles')
         OUTPUT: None
 
-        Command to create the movie:
+        Commands to create the movie:
 
         $ ffmpeg -f image2 -r 1 -i image%04d.png -vcodec mpeg4 -y
                  animated_persistence.mp4
+
+        $ convert -delay 40 -loop 0 *.png animaion.gif
     '''
     _, ymin, _, _ = _get_padded_box(X, padding=0.0)
 
