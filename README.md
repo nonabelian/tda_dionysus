@@ -25,14 +25,18 @@ interfacing with [Dionysus](http://www.mrzv.org/software/dionysus/).
 For continuous space, famously, "the coffee cup is topologically equivalent to
 a donut", which can be viewed
 [on Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif).  It's a bit different for a discrete space.
-In data analysis, we often rescale features.  Topological invariants are
+In data analysis, we often rescale features and then run the data through
+a model.  Topological invariants are
 insensitive to such transformations.  **Think of rescaling features as a
 deformation**.
 
 The way to capture the concepts of topology for discrete sets of data is
 accomplished through something called persistent homology.  Essentially it
-means that when we allow points to This is best demonstrated through an
-example.  Consider noisy data in the shape of a circle:
+means that when we only connect points a certain distance (scale) apart.  As we
+change the scale, for each scale we check to see which features are there.  So
+for example, at some large enough scale, we will connect points across a hole
+and the hole will disappear. Features that stick around*persist*. This is best
+demonstrated through an example.  Consider noisy data in the shape of a circle:
 
 ![cycle persistence](images/animated_persistence.gif)
 
