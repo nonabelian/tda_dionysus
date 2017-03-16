@@ -8,6 +8,8 @@ You are encouraged to read the detailed and more technical account of
 The goal is to eventually create networks of data topology for a few realistic
 datasets.
 
+## Results
+
 ## Introduction
 
 **Topology** main points, extremely informally:
