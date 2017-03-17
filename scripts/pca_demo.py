@@ -26,7 +26,7 @@ def run_coffee_mug_pca_example():
     ax.set_xlim(-1.5, 1.5)
     ax.set_ylim(-1.5, 1.5)
 
-    plt.savefig('../images/coffee_mug_pca.png')
+    plt.savefig('images/coffee_mug_pca.png')
     plt.show()
 
 
@@ -51,7 +51,7 @@ def run_pail_pca_example():
     ax.set_xlim(-1.5, 1.5)
     ax.set_ylim(-1.5, 1.5)
 
-    plt.savefig('../images/pail_pca.png')
+    plt.savefig('images/pail_pca.png')
     plt.show()
 
 
